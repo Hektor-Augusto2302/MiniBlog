@@ -1,0 +1,73 @@
+.formControl {
+    display: block;
+    width: 60%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #e9fbeb !important;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btnOutline {
+    background-color: #e9fbeb;
+    border-radius: 0;
+    color: #000;
+    border: 1px solid #000;
+}
+
+.btnOutline:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.customCard {
+    margin-top: 50px;
+    width: 25rem;
+    box-shadow:rgba(0, 0, 0, 0.1) -10px -2px 10px 10px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tag {
+    margin-right: 4.3rem;
+}
+
+.btnLink {
+    text-decoration: none;
+    background-color: transparent;
+    border: 1px solid #000;
+    color: #000;
+    transition: .7s;
+    font-size: 1em;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+}
+
+.btnLink:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.btnBuuton {
+    text-decoration: none;
+    background-color: transparent;
+    border: 1px solid #000;
+    color: #000;
+    transition: .7s;
+    font-size: 1em;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+}
+
+.btnBuuton:hover {
+    background-color: #dc3545;
+    color: #fff;
+}
