@@ -24,7 +24,7 @@ Bem-vindo ao Mini Blog, um projeto web onde você pode compartilhar suas fotos, 
 
 ## Como Utilizar
 
-1. Acesse o Mini Blog: [Mini Blog](https://chic-buttercream-a0316c.netlify.app/login)
+1. Acesse o Mini Blog: https://chic-buttercream-a0316c.netlify.app/login
 2. Faça login ou crie uma nova conta para começar a postar.
 3. Explore as funcionalidades do blog, adicione suas postagens e utilize a barra de pesquisa para encontrar conteúdo específico.
 
