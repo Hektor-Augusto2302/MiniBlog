@@ -24,7 +24,7 @@ function App() {
     <div className='App'>
       <BrowserRouter>
         <Navbar />
-        <div className="container">
+        <div className="container container-app">
           <Routes>
             <Route 
               path='/' 
