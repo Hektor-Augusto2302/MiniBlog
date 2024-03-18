@@ -2,13 +2,13 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyB9fqlY2dnxw9qrNtLJezopRF1lnI0HImo",
-    authDomain: "miniblog-b90f1.firebaseapp.com",
-    projectId: "miniblog-b90f1",
-    storageBucket: "miniblog-b90f1.appspot.com",
-    messagingSenderId: "386230759555",
-    appId: "1:386230759555:web:5d46d175366c8862d66bb6",
-    measurementId: "G-2BTR4GZQ29"
+    apiKey: "AIzaSyBsOgn3KjXHJUS0sSMFJAI4DEIcWOaT_n0",
+    authDomain: "miniblog-6dd0d.firebaseapp.com",
+    projectId: "miniblog-6dd0d",
+    storageBucket: "miniblog-6dd0d.appspot.com",
+    messagingSenderId: "246404530801",
+    appId: "1:246404530801:web:422cde51e3bd3f06a991d0",
+    measurementId: "G-VMWSL09TFQ"
 };
 
 const app = initializeApp(firebaseConfig);
