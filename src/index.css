@@ -102,3 +102,13 @@ button[disabled] {
     border-radius: 5px;
     text-align: center;
 }
+
+.dark-mode {
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+.light-mode {
+    background-color: #fff;
+    color: #1e1e1e;
+}

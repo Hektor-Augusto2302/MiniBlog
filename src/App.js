@@ -16,45 +16,48 @@ import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import { useAuth } from './context/authContext';
 import PostDetails from './pages/PostDetails/PostDetails';
+import { DarkModeProvider } from './context/darkModeContext';
 
 function App() {
   const { user } = useAuth();
 
   return (
-    <div className='App'>
-      <BrowserRouter>
-        <Navbar />
-        <div className="container container-app">
-          <Routes>
-            <Route 
-              path='/' 
-              element={user ? <Home /> : <Navigate to='/login'/>} 
-            />
-            <Route 
-              path='/about' 
-              element={user ? <About /> : <Navigate to='/login' />} 
-            />
-            <Route 
-              path='/posts/:id' 
-              element={user ? <PostDetails /> : <Navigate to='/login' />} 
-            />
-            <Route
-              path='/login'
-              element={!user ? <Login /> : <Navigate to='/' />}
-            />
-            <Route
-              path='/register'
-              element={!user ? <Register /> : <Navigate to='/register' />}
-            />
-            <Route
-              path='/post'
-              element={user ? <Post /> : <Navigate to='/login' />}
-            />
-          </Routes>
-        </div>
-        <Footer />
-      </BrowserRouter>
-    </div>
+    <DarkModeProvider>
+      <div className='App'>
+        <BrowserRouter>
+          <Navbar />
+          <div className="container container-app">
+            <Routes>
+              <Route
+                path='/'
+                element={user ? <Home /> : <Navigate to='/login' />}
+              />
+              <Route
+                path='/about'
+                element={user ? <About /> : <Navigate to='/login' />}
+              />
+              <Route
+                path='/posts/:id'
+                element={user ? <PostDetails /> : <Navigate to='/login' />}
+              />
+              <Route
+                path='/login'
+                element={!user ? <Login /> : <Navigate to='/' />}
+              />
+              <Route
+                path='/register'
+                element={!user ? <Register /> : <Navigate to='/register' />}
+              />
+              <Route
+                path='/post'
+                element={user ? <Post /> : <Navigate to='/login' />}
+              />
+            </Routes>
+          </div>
+          <Footer />
+        </BrowserRouter>
+      </div>
+    </DarkModeProvider>
   );
 }
 
