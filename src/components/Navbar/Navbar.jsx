@@ -26,7 +26,7 @@ const Navbar = () => {
           Mini <span>Blog</span>
         </NavLink>
         <button className={`${darkMode ? styles.darkModeButtonDark: styles.lightModeButtonLight}`} onClick={toggleDarkMode}>
-          {darkMode ? 'Modo Claro' : 'Modo Escuro'}
+          {darkMode ? 'Modo Escuro' : 'Modo Claro'}
         </button>
         <div className="d-flex flex-column justify-content-end">
           <button
@@ -40,7 +40,7 @@ const Navbar = () => {
           >
             <i className="bi bi-text-left"></i>
           </button>
-          <ul className={`navbar-nav collapse navbar-collapse ${styles.navbarCollaseMidia}`} id="navbarNav">
+          <ul className={`navbar-nav collapse navbar-collapse ${darkMode ? styles.darkModeMidia: styles.lightModeMidia}`} id="navbarNav">
             {!user ? (
               <>
                 <li className={`${darkMode ? styles.darkModeLinks: styles.lightModeLinks} links nav-item me-3`}>
