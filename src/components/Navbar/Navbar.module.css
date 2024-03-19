@@ -1,23 +1,37 @@
-.navbar {
+.lightModenav {
     box-shadow: rgba(0, 0, 0, .15) 0px -2px 10px 0px;
+    background-color: #fff;
 }
 
-.brand {
+.lightModebrand {
     font-size: 1.2em;
     color: #321532;
 }
 
-.brand:hover {
+.lightModeButtonLight {
+    color: #000;
+}
+
+.lightModebrand:hover {
     color: #733073;
 }
 
-.brand span {
+.lightModebrand span {
     font-weight: 900;
     text-transform: uppercase;
 }
 
-.linksNav a {
+.lightModeLinks a {
     text-decoration: none;
+    color: #000;
+}
+
+.lightModeLinks a.active {
+    background-color: #000;
+    color: #fff !important;
+}
+
+.lightModeButton {
     color: #000;
 }
 
@@ -26,8 +40,41 @@
     color: #fff !important;
 }
 
-nav button {
-    color: #000;
+.darkModenav {
+    box-shadow: rgb(240, 237, 237) 0px -2px 10px 0px;
+    background-color: #000;
+}
+
+.darkModebrand {
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.darkModeButtonDark {
+    color: #fff;
+}
+
+.darkModebrand:hover {
+    color: #dfdcdf;
+}
+
+.darkModebrand span {
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.darkModeLinks a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.darkModeLinks a.active {
+    background-color: #fff;
+    color: #000 !important;
+}
+
+.darkModeButton {
+    color: #fff;
 }
 
 @media (max-width: 576px) {
