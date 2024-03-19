@@ -16,14 +16,14 @@ import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import { useAuth } from './context/authContext';
 import PostDetails from './pages/PostDetails/PostDetails';
-import { DarkModeProvider } from './context/darkModeContext';
+import { useDarkMode } from './context/darkModeContext';
 
 function App() {
   const { user } = useAuth();
+  const { darkMode } = useDarkMode();
 
   return (
-    <DarkModeProvider>
-      <div className='App'>
+      <div className={`App ${darkMode ? "dark-mode" : "light-mode"}`}>
         <BrowserRouter>
           <Navbar />
           <div className="container container-app">
@@ -57,7 +57,6 @@ function App() {
           <Footer />
         </BrowserRouter>
       </div>
-    </DarkModeProvider>
   );
 }
 
