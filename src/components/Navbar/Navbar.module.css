@@ -9,18 +9,22 @@
 }
 
 .lightModeButtonLight {
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    color: #000;
+    transition: .7s;
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif;
+}
+
+.lightModeNavbarToggle {
+    background-color: #e0e5e7;
     color: #000;
 }
 
-.lightModeNavbarToglle {
-    padding: 0.25rem 0.75rem;
-    font-size: 1.25rem;
-    line-height: 1;
-    background-color: #d8dcdfd8;
-    color: #000;
-    border: 1px solid transparent;
-    border-radius: 0.25rem;
-    transition: box-shadow .15s ease-in-out;
+.lightModeIcon {
+    color: #000 !important;
 }
 
 .lightModebrand:hover {
@@ -43,7 +47,13 @@
 }
 
 .lightModeButton {
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
     color: #000;
+    transition: .7s;
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif;
 }
 
 .active {
@@ -62,18 +72,22 @@
 }
 
 .darkModeButtonDark {
-    color: #f6fcff;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    transition: .7s;
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif;
 }
 
-.darkModeNavbarToglle {
-    padding: 0.25rem 0.75rem;
-    font-size: 1.25rem;
-    line-height: 1;
-    background-color: #1b1a1ada;
+.darkModeNavbarToggle {
+    background-color: #321532;
     color: #fff;
-    border: 1px solid transparent;
-    border-radius: 0.25rem;
-    transition: box-shadow .15s
+}
+
+.darkModeIcon {
+    color: #fff !important;
 }
 
 .darkModebrand:hover {
@@ -96,7 +110,13 @@
 }
 
 .darkModeButton {
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
     color: #f6fcff;
+    transition: .7s;
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif;
 }
 
 @media (max-width: 576px) {

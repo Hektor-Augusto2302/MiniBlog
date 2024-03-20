@@ -34,7 +34,7 @@ const Navbar = () => {
         </button>
         <div className="d-flex flex-column justify-content-end">
           <button
-            className={`navbar-toggler {${darkMode ? styles.darkModeNavbarToglle: styles.lightModeNavbarToglle}`}
+            className={`navbar-toggler ${darkMode ? styles.darkModeNavbarToggle : styles.lightModeNavbarToggle}`}
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
@@ -42,7 +42,7 @@ const Navbar = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <i className="bi bi-text-left"></i>
+            <i className={`bi bi-text-left {${darkMode ? styles.darkModeIcon : styles.lightModeIcon}`}></i>
           </button>
           <ul className={`navbar-nav collapse navbar-collapse ${darkMode ? styles.darkModeMidia: styles.lightModeMidia}`} id="navbarNav">
             {!user ? (

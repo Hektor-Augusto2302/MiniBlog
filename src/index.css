@@ -12,7 +12,7 @@ input:focus, textarea:focus {
     outline: none;
 }
 
-.light-mode, a, nav button {
+.light-mode, a, nav {
     text-decoration: none;
     background-color: transparent;
     border: none;
@@ -103,7 +103,7 @@ button[disabled] {
     font-family: "Montserrat", sans-serif;
 }
 
-.dark-mode, a, nav button {
+.dark-mode, a, nav {
     text-decoration: none;
     background-color: transparent;
     border: none;
