@@ -3,6 +3,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import useAuthentication from "../../hooks/useAuthentication";
 import { useDarkMode } from "../../context/darkModeContext";
+import InputDarkMode from "../InputDarkMode/InputDarkMode";
 
 const Navbar = () => {
   const { user } = useAuth();
@@ -25,12 +26,15 @@ const Navbar = () => {
         <NavLink className={`navbar-brand ${darkMode ? styles.darkModebrand: styles.lightModebrand}`} to="/">
           Mini <span>Blog</span>
         </NavLink>
-        <button className={`${darkMode ? styles.darkModeButtonDark: styles.lightModeButtonLight}`} onClick={toggleDarkMode}>
-          {darkMode ? 'Modo Escuro' : 'Modo Claro'}
+        <button className={`${darkMode ? styles.darkModeButtonDark: styles.lightModeButtonLight}`}>
+          <InputDarkMode
+            darkMode={darkMode}
+            toggleDarkMode={toggleDarkMode}
+          />
         </button>
         <div className="d-flex flex-column justify-content-end">
           <button
-            className="navbar-toggler"
+            className={`navbar-toggler {${darkMode ? styles.darkModeNavbarToglle: styles.lightModeNavbarToglle}`}
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"

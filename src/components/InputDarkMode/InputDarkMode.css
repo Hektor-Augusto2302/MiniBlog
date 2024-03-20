@@ -1,0 +1,29 @@
+.theme__icon {
+    display: block;
+    top: 0.8em;
+    left: 1.2em;
+    width: 1.5em;
+    height: 1.5em;
+    cursor: pointer;
+}
+
+.theme__icon-dark::before {
+    content: '☀️';
+    font-size: 1.2em;
+}
+
+.theme__icon-light::before {
+    content: '🌙';
+    font-size: 1.2em;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}

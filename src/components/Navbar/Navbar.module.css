@@ -12,6 +12,17 @@
     color: #000;
 }
 
+.lightModeNavbarToglle {
+    padding: 0.25rem 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: #d8dcdfd8;
+    color: #000;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    transition: box-shadow .15s ease-in-out;
+}
+
 .lightModebrand:hover {
     color: #733073;
 }
@@ -52,6 +63,17 @@
 
 .darkModeButtonDark {
     color: #f6fcff;
+}
+
+.darkModeNavbarToglle {
+    padding: 0.25rem 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: #1b1a1ada;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    transition: box-shadow .15s
 }
 
 .darkModebrand:hover {

@@ -19,7 +19,6 @@ input:focus, textarea:focus {
     color: #000;
     transition: .7s;
     font-size: 1em;
-    cursor: pointer;
     font-family: "Montserrat", sans-serif;
 }
 
@@ -111,6 +110,5 @@ button[disabled] {
     color: #fff;
     transition: .7s;
     font-size: 1em;
-    cursor: pointer;
     font-family: "Montserrat", sans-serif;
 }
