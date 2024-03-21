@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import useAuthentication from '../../hooks/useAuthentication';
+import { useDarkMode } from '../../context/darkModeContext';
 import { BsArrowRepeat } from 'react-icons/bs';
 import styles from './Login.module.css';
 
@@ -8,6 +9,7 @@ const Login = () => {
   const { logIn, error, loading } = useAuthentication();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const { darkMode } = useDarkMode();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -22,7 +24,7 @@ const Login = () => {
   return (
     <div className="container mt-5">
       <div className="row justify-content-center">
-        <div className={`${styles.shadowEffect} col-md-6`}>
+        <div className={`${ darkMode ? styles.shadowEffectDark : styles.shadowEffectLight} col-md-6`}>
           <h1 className='my-5'>Entrar em sua conta</h1>
           <form onSubmit={handleLogin}>
             <div className="mb-3">
@@ -31,7 +33,7 @@ const Login = () => {
               </label>
               <input
                 type="email"
-                className={styles.formControl}
+                className={darkMode ? styles.formControlDark : styles.formControlLight}
                 id="email"
                 name="email"
                 value={email || ""}
@@ -46,7 +48,7 @@ const Login = () => {
               </label>
               <input
                 type="password"
-                className={styles.formControl}
+                className={darkMode ? styles.formControlDark : styles.formControlLight}
                 id="password"
                 name="password"
                 value={password || ""}

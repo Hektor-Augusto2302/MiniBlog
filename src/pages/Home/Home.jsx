@@ -5,12 +5,14 @@ import unidecode from 'unidecode';
 import { Link } from 'react-router-dom';
 import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner';
 import { BiError } from 'react-icons/bi';
+import { useDarkMode } from '../../context/darkModeContext';
 
 const Home = () => {
   const { posts, loading, error, fetchData, deletePost } = useFetchPosts();
   const [searchTerm, setSearchTerm] = useState('');
   const [searchedPosts, setSearchedPosts] = useState([]);
   const [showNoResults, setShowNoResults] = useState(false);
+  const { darkMode } = useDarkMode();
 
   useEffect(() => {
     fetchData();
@@ -56,7 +58,7 @@ const Home = () => {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
-        <button className={styles.btnOutline} onClick={handleSearch}>
+        <button className={ darkMode ? styles.btnOutlineDark : styles.btnOutlineLight} onClick={handleSearch}>
           Pesquisar
         </button>
       </div>
@@ -64,8 +66,8 @@ const Home = () => {
       <div className="d-flex flex-column align-items-center">
         {displayPosts.length > 0 ? (
           displayPosts.map((post) => (
-            <div key={post.id} className={`${styles.customCard} pb-5 mb-5`}>
-              <img src={post.image} className="card-img-top" alt={`Card ${post.id}`} />
+            <div key={post.id} className={`${ darkMode ? styles.customCardDark : styles.customCardLight} pb-5 mb-5`}>
+              <img src={post.image} className="card-img-top img-fluid" alt={`Card ${post.id}`} />
               <div className="card-body text-center">
                 <h3 className="card-title">{post.title}</h3>
                 <h5 className="card-text">{post.body}</h5>
@@ -78,8 +80,8 @@ const Home = () => {
                 ))}
               </ul>
               <div className='d-flex justify-content-center align-items-center mt-5'>
-                <Link className={`${styles.btnLink} me-3 px-5 py-3`} to={`/posts/${post.id}`}>Ver</Link>
-                <button className={`${styles.btnBuuton} px-5 py-3`} onClick={() => handleDelete(post.id)}>Excluir</button>
+                <Link className={`${ darkMode ? styles.btnLinkDark : styles.btnLinkLight} me-3 px-5 py-3`} to={`/posts/${post.id}`}>Ver</Link>
+                <button className={`${ darkMode ? styles.btnBuutonDark : styles.btnBuutonLight} px-5 py-3`} onClick={() => handleDelete(post.id)}>Excluir</button>
               </div>
             </div>
           ))

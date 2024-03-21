@@ -13,61 +13,127 @@
     -moz-appearance: none;
     appearance: none;
     border-radius: 0.25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
-.btnOutline {
+.customCardLight {
+    margin-top: 50px;
+    width: 25rem;
+    box-shadow: rgba(0, 0, 0, 0.1) -10px -2px 10px 10px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.btnOutlineLight {
     background-color: #e9fbeb;
     border-radius: 0;
     color: #000;
     border: 1px solid #000;
 }
 
-.btnOutline:hover {
+.btnOutlineLight:hover {
     background-color: #000;
     color: #fff;
 }
 
-.customCard {
+.tag {
+    margin-right: 3.5rem;
+}
+
+.btnLinkLight {
+    text-decoration: none;
+    background-color: transparent;
+    border: 1px solid #000;
+    color: #000;
+    transition: .7s;
+    font-size: 1em;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+}
+
+.btnLinkLight:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.btnBuutonLight {
+    text-decoration: none;
+    background-color: transparent;
+    border: 1px solid #000;
+    color: #000;
+    transition: .7s;
+    font-size: 1em;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+}
+
+.btnBuutonLight:hover {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.customCardDark {
     margin-top: 50px;
     width: 25rem;
-    box-shadow:rgba(0, 0, 0, 0.1) -10px -2px 10px 10px;
+    box-shadow: rgb(187, 181, 181) -10px -2px 10px 10px;
     border-radius: 8px;
     overflow: hidden;
 }
 
-.tag {
-    margin-right: 4.3rem;
+.btnOutlineDark {
+    background-color: #e9fbeb;
+    border-radius: 0;
+    color: #000;
+    border: 1px solid #fff;
 }
 
-.btnLink {
+.btnOutlineDark:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.btnLinkDark {
     text-decoration: none;
     background-color: transparent;
-    border: 1px solid #000;
-    color: #000;
-    transition: .7s;
-    font-size: 1em;
-    cursor: pointer;
-    font-family: "Montserrat", sans-serif;
-}
-
-.btnLink:hover {
-    background-color: #000;
+    border: 1px solid #fff;
     color: #fff;
-}
-
-.btnBuuton {
-    text-decoration: none;
-    background-color: transparent;
-    border: 1px solid #000;
-    color: #000;
     transition: .7s;
     font-size: 1em;
     cursor: pointer;
     font-family: "Montserrat", sans-serif;
 }
 
-.btnBuuton:hover {
+.btnLinkDark:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.btnBuutonDark {
+    text-decoration: none;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    transition: .7s;
+    font-size: 1em;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+}
+
+.btnBuutonDark:hover {
     background-color: #dc3545;
-    color: #fff;
+    color: #000;
+}
+
+@media (max-width: 400px) {
+    .tag {
+        margin-right: 1rem;
+    }
+
+    .customCardLight {
+        width: 20rem;
+    }
+
+    .customCardDark {
+        width: 20rem;
+    }
 }
