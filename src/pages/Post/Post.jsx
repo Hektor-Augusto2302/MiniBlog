@@ -5,6 +5,7 @@ import { db } from '../../firebase/config';
 import { useNavigate } from 'react-router-dom';
 import useAuthentication from '../../hooks/useAuthentication';
 import { serverTimestamp } from 'firebase/firestore';
+import { useDarkMode } from '../../context/darkModeContext';
 
 const Post = () => {
     const [title, setTitle] = useState('');
@@ -15,6 +16,7 @@ const Post = () => {
 
     const { loading, error, addPostToFirestore } = useFirebasePost(db);
     const { user } = useAuthentication();
+    const { darkMode } = useDarkMode();
 
     const navigate = useNavigate()
 
@@ -39,7 +41,6 @@ const Post = () => {
             return;
         }
 
-        // Crie um objeto com os dados do post
         const postData = {
             title,
             body,
@@ -62,7 +63,7 @@ const Post = () => {
     return (
         <div className="container my-5">
             <div className="row justify-content-center">
-                <div className={`col-md-6 ${styles.shadowEffect}`}>
+                <div className={`col-md-6 ${ darkMode ? styles.shadowEffectDark : styles.shadowEffectLight}`}>
                     <h2 className="my-4">Criar Post</h2>
                     <p>Escreva sobre o que quiser e compartilhe conhecimento</p>
                     <form onSubmit={handleSubmit}>
@@ -73,7 +74,7 @@ const Post = () => {
                             <input
                                 type="text"
                                 name="title"
-                                className={styles.formControl}
+                                className={darkMode ? styles.formControlDark : styles.formControlLight}
                                 value={title}
                                 onChange={(e) => setTitle(e.target.value)}
                                 required
@@ -88,7 +89,7 @@ const Post = () => {
                                 type="text"
                                 id="image"
                                 name="image"
-                                className={styles.formControl}
+                                className={darkMode ? styles.formControlDark : styles.formControlLight}
                                 value={image}
                                 onChange={(e) => setImage(e.target.value)}
                                 required
@@ -101,7 +102,7 @@ const Post = () => {
                             </label>
                             <textarea
                                 name="body"
-                                className={styles.formControl}
+                                className={darkMode ? styles.formControlDark : styles.formControlLight}
                                 value={body}
                                 onChange={(e) => setBody(e.target.value)}
                                 required
@@ -115,7 +116,7 @@ const Post = () => {
                             <input
                                 type="text"
                                 name="tags"
-                                className={styles.formControl}
+                                className={darkMode ? styles.formControlDark : styles.formControlLight}
                                 value={tags}
                                 onChange={(e) => setTags(e.target.value)}
                                 required
