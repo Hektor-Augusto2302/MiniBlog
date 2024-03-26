@@ -34,7 +34,7 @@ const Navbar = () => {
         </button>
         <div className="d-flex flex-column justify-content-end">
           <button
-            className={`navbar-toggler ${darkMode ? styles.darkModeNavbarToggle : styles.lightModeNavbarToggle}`}
+            className={`navbar-toggler ${styles.navbarFocusNone} ${darkMode ? styles.darkModeNavbarToggle : styles.lightModeNavbarToggle}`}
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"

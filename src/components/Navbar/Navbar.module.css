@@ -19,7 +19,6 @@
 }
 
 .lightModeNavbarToggle {
-    background-color: #e0e5e7;
     color: #000;
 }
 
@@ -82,7 +81,6 @@
 }
 
 .darkModeNavbarToggle {
-    background-color: #321532;
     color: #fff;
 }
 
@@ -117,6 +115,12 @@
     transition: .7s;
     font-size: 1em;
     font-family: "Montserrat", sans-serif;
+}
+
+.navbarFocusNone:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: none !important;
 }
 
 @media (max-width: 576px) {
