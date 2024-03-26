@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import styles from './Register.module.css';
+import { useDarkMode } from '../../context/darkModeContext';
 import useAuthentication from '../../hooks/useAuthentication';
 
 const Register = () => {
@@ -9,6 +10,8 @@ const Register = () => {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
+
+    const { darkMode } = useDarkMode();
 
     const handleRegister = async (e) => {
         e.preventDefault();
@@ -33,7 +36,7 @@ const Register = () => {
     };
 
     useEffect(() => {
-        if(errorFirebase) {
+        if (errorFirebase) {
             setError(errorFirebase)
         }
     }, [errorFirebase])
@@ -41,7 +44,7 @@ const Register = () => {
     return (
         <div className="container mt-5">
             <div className="row justify-content-center">
-                <div className={`${styles.shadowEffect} col-md-6`}>
+                <div className={`${ darkMode ? styles.shadowEffectDark : styles.shadowEffectLight} col-md-6`}>
                     <h1 className='my-3'>Registrar o usuário</h1>
                     <form onSubmit={handleRegister}>
                         <div className="mb-3">
@@ -50,7 +53,7 @@ const Register = () => {
                             </label>
                             <input
                                 type="text"
-                                className={styles.formControl}
+                                className={darkMode ? styles.formControlDark : styles.formControlLight}
                                 id="name"
                                 name="name"
                                 value={displayName || ""}
@@ -65,7 +68,7 @@ const Register = () => {
                             </label>
                             <input
                                 type="email"
-                                className={styles.formControl}
+                                className={darkMode ? styles.formControlDark : styles.formControlLight}
                                 id="email"
                                 name="email"
                                 value={email || ""}
@@ -80,7 +83,7 @@ const Register = () => {
                             </label>
                             <input
                                 type="password"
-                                className={styles.formControl}
+                                className={darkMode ? styles.formControlDark : styles.formControlLight}
                                 id="password"
                                 name="password"
                                 value={password || ""}
@@ -95,7 +98,7 @@ const Register = () => {
                             </label>
                             <input
                                 type="password"
-                                className={styles.formControl}
+                                className={darkMode ? styles.formControlDark : styles.formControlLight}
                                 id="password"
                                 name="confirmPassord"
                                 value={confirmPassword || ""}
@@ -105,12 +108,12 @@ const Register = () => {
                             />
                         </div>
                         <div className='d-flex justify-content-center'>
-                            {!loading && 
+                            {!loading &&
                                 <button type="submit" className="btn my-3">
                                     Registrar
                                 </button>
                             }
-                            {loading && 
+                            {loading &&
                                 <button type="submit" className="btn my-3" disabled>
                                     ...Aguarde
                                 </button>
