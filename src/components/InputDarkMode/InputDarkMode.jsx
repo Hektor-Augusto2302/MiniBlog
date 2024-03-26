@@ -2,11 +2,14 @@ import './InputDarkMode.css';
 
 const InputDarkMode = ({ darkMode, toggleDarkMode }) => {
     return (
-        <label htmlFor="theme" className="theme">
-            <span className="theme__toggle-wrap">
-                <input id="theme" className="theme__toggle visually-hidden" type="checkbox" role="switch" name="theme" value="dark" defaultChecked={darkMode}/>
-                    <span className={`theme__fill`}></span>
-                    <span className={`theme__icon ${darkMode ? 'theme__icon-light' : 'theme__icon-dark'}`} onClick={toggleDarkMode}></span>
+        <label className="switch switch-dark d-flex align-items-center">
+            <input checked={darkMode} type="checkbox" onChange={toggleDarkMode} />
+            <span className="slider dark-mode-input">
+                {darkMode ? (
+                    <i className="bi bi-moon-stars moon-icon"></i>
+                ) : (
+                    <i className="bi bi-brightness-high-fill sun-icon"></i>
+                )}
             </span>
         </label>
     )

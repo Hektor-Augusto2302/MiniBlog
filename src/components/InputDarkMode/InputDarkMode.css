@@ -1,29 +1,63 @@
-.theme__icon {
-    display: block;
-    top: 0.8em;
-    left: 1.2em;
-    width: 1.5em;
-    height: 1.5em;
-    cursor: pointer;
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
 }
 
-.theme__icon-dark::before {
-    content: '☀️';
-    font-size: 1.2em;
+.switch input {
+    display: none;
 }
 
-.theme__icon-light::before {
-    content: '🌙';
-    font-size: 1.2em;
-}
-
-.visually-hidden {
+.slider {
     position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
+    cursor: pointer;
+    width: 55px;
+    height: 28px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: hsl(48, 90%, 85%);
+    border-radius: 34px;
+    transition: .4s;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: hsl(48, 90%, 55%);
+    border-radius: 50%;
+    transition: .4s;
+}
+
+.switch-dark input:checked + .slider:before {
+    background-color: hsl(198,90%,15%);
+}
+input:checked + .slider {
+    background-color: #b2a8c4;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.bi {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.bi-brightness-high-fill {
+    left: 6px;
+    color: #fff;
+}
+
+.bi-moon-stars {
+    right: 6px;
+    color: #fff;
 }
