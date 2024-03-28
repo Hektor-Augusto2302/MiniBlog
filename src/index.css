@@ -98,7 +98,7 @@ button[disabled] {
 }
 
 .dark-mode, body {
-    background-color: #000 !important;
+    background-color: #110d0d !important;
     padding: 0;
     font-family: "Montserrat", sans-serif;
 }
