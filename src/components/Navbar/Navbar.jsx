@@ -21,7 +21,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav className={`d-flex justify-content-between align-items-center navbar navbar-expand-sm ${styles.navbar} ${darkMode ? styles.darkModenav: styles.lightModenav}`}>
+    <nav className={`d-flex justify-content-between align-items-center navbar navbar-expand-sm ${darkMode ? styles.darkModenav: styles.lightModenav}`}>
       <div className="container">
         <NavLink className={`navbar-brand ${darkMode ? styles.darkModebrand: styles.lightModebrand}`} to="/">
           Mini <span>Blog</span>
