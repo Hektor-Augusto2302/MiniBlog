@@ -47,12 +47,12 @@ const Navbar = () => {
           <ul className={`navbar-nav collapse navbar-collapse ${darkMode ? styles.darkModeMidia: styles.lightModeMidia}`} id="navbarNav">
             {!user ? (
               <>
-                <li className={`${darkMode ? styles.darkModeLinks: styles.lightModeLinks} links nav-item me-3`}>
+                <li className={`${darkMode ? styles.darkModeLinks: styles.lightModeLinks} links nav-item`}>
                   <NavLink className={({ isActive }) => (isActive ? styles.active : "")} to="/login">
                     Entrar
                   </NavLink>
                 </li>
-                <li className={`${darkMode ? styles.darkModeLinks: styles.lightModeLinks} links nav-item me-3`}>
+                <li className={`${darkMode ? styles.darkModeLinks: styles.lightModeLinks} links nav-item`}>
                   <NavLink className={({ isActive }) => (isActive ? styles.active : "")} to="/register">
                     Registrar
                   </NavLink>
@@ -60,17 +60,17 @@ const Navbar = () => {
               </>
             ) : (
               <>
-                <li className={`${darkMode ? styles.darkModeLinks: styles.lightModeLinks} links nav-item me-3`}>
+                <li className={`${darkMode ? styles.darkModeLinks: styles.lightModeLinks} links nav-item`}>
                   <NavLink className={({ isActive }) => (isActive ? styles.active : "")} to="/">
                     Home
                   </NavLink>
                 </li>
-                <li className={`${darkMode ? styles.darkModeLinks: styles.lightModeLinks} links nav-item me-3`}>
+                <li className={`${darkMode ? styles.darkModeLinks: styles.lightModeLinks} links nav-item`}>
                   <NavLink className={({ isActive }) => (isActive ? styles.active : "")} to="/post">
                     Novo Post
                   </NavLink>
                 </li>
-                <li className={`${darkMode ? styles.darkModeLinks: styles.lightModeLinks} links nav-item me-3`}>
+                <li className={`${darkMode ? styles.darkModeLinks: styles.lightModeLinks} links nav-item`}>
                   <NavLink className={({ isActive }) => (isActive ? styles.active : "")} to="/about">
                     Sobre
                   </NavLink>
